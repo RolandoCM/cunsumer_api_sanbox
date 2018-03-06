@@ -1,0 +1,62 @@
+<!--  <div class="producto1">
+
+  <img src="../producto1.jpg" alt="p" height="400" width="300">
+    <p>Nuevo producto</p>
+    <p>Descripcion</p>
+    <a href="pago">  <button type="button" class="btn btn-primary" name="button">Pagar</button></a>
+  </div>
+
+</div>-->
+<div class="container text-center">
+  <h3>Tienda</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Lenovo Legion Y720</h3>
+      <img src="http://www3.lenovo.com/medias/lenovo-laptop-legion-y720-15-front.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NXxpbWFnZS9wbmd8aW1hZ2VzL2g4Zi9oMjIvOTM1OTk5ODYxNTU4Mi5wbmd8YmQ2NzMzMzY1Mzc0MTE2YjMxMzVlOGMwMTk1ZThiNjFlOTlmOGYxMTEzZWEzNzRmNjY1NTA3NTMyMzkxZWQzMQ"
+      class="img-responsive" style="width:100%" alt="Image">
+      <h4>Descripción</h4>
+      <p>La Lenovo Legion Y720 trae incorporado todo lo que cualquier gamer podría querer.</p>
+      <h3  value="d">Precio:</h3>
+      <input type="text" id="precioProducto1" value="40"  size="10" disabled><br><br>
+      <a href="pago">  <button type="button" onclick="precio1()" class="btn btn-primary" name="button">Comprar</button></a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Acer Aspire R 11</h3>
+      <img src="https://static.acer.com/up/Resource/Acer/Laptops/Aspire_R11/Images/20150416/Aspire_R_11_R3-131T_blue_preview.png" class="img-responsive" style="width:100%" alt="Image">
+      <h4>Descripción</h4>
+      <p>Computadora portátil delgada con una cubierta superior de metal1 y un atractivo cuerpo metálico.</p>
+      <h3 >Precio</h3>
+        <input type="text" id="precioProducto2"   value="50" disabled size="10"><br><br>
+      <a href="pago">  <button type="button" onclick="precio2()" class="btn btn-primary" name="button">Comprar</button></a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Acer SP513-52N-58WW </h3>
+      <img src="https://static.acer.com/up/Resource/Acer/Laptops/Spin_5/Image/20170705/Spin-5-SP513_preview.png" class="img-responsive" style="width:100%" alt="Image">
+      <h4>Descripción</h4>
+      <p>Intel® Core™ i5-8250U
+        1.6 GHz; Quad-core
+        Memory
+        DDR4
+        8 GB (standard)
+        Up to 16 GB (maximum)</p>
+        <h3 >Precio </h3>
+          <input type="text" id="precioProducto3" value="60" disabled size="10" ><br><br>
+      <a href="pago">  <button type="button" onclick="precio3()" class="btn btn-primary" name="button">Comprar</button></a>
+    </div>
+  </div>
+</div><br>
+<script type="text/javascript">
+function precio1(){
+  var producto1 = document.getElementById('precioProducto1').value;
+  localStorage.setItem("producto", producto1);
+}
+function precio2()
+{
+  var producto2 = document.getElementById('precioProducto2').value;
+  localStorage.setItem("producto", producto2);
+}
+function precio3(){
+  var producto3 = document.getElementById('precioProducto3').value;
+  localStorage.setItem("producto", producto3);
+}
+</script>
