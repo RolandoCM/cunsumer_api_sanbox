@@ -33,6 +33,7 @@ router.post('/', function(req, res, next) {
       // once it has been authorized successfully
       submitForSettlement: true
     }
+
   }, function(error, result) {
       if (result) {
         res.send(result);

@@ -30,6 +30,17 @@ app.use('/users', users);
 // The checkout route
 var checkout = require('./routes/checkout');
 app.use('/checkout', checkout);
+var email = require('./routes/email');
+app.use('/email', email);
+// try {
+//   var email = require('./routes/email');
+//   app.use('/email', email);
+// } catch (e) {
+//   console.log(e);
+// } finally {
+//
+// }
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

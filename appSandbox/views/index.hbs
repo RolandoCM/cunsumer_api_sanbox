@@ -7,6 +7,14 @@
   </div>
 
 </div>-->
+<style>
+#precioProducto1, #precioProducto2, #precioProducto3{
+	color: #707070;
+	background-color: #FFFFFF;
+	border-width:0;
+}
+</style>
+
 <div class="container text-center">
   <h3>Tienda</h3><br>
   <div class="row">
@@ -14,49 +22,101 @@
       <h3>Lenovo Legion Y720</h3>
       <img src="http://www3.lenovo.com/medias/lenovo-laptop-legion-y720-15-front.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NXxpbWFnZS9wbmd8aW1hZ2VzL2g4Zi9oMjIvOTM1OTk5ODYxNTU4Mi5wbmd8YmQ2NzMzMzY1Mzc0MTE2YjMxMzVlOGMwMTk1ZThiNjFlOTlmOGYxMTEzZWEzNzRmNjY1NTA3NTMyMzkxZWQzMQ"
       class="img-responsive" style="width:100%" alt="Image">
-      <h4>Descripción</h4>
       <p>La Lenovo Legion Y720 trae incorporado todo lo que cualquier gamer podría querer.</p>
-      <h3  value="d">Precio:</h3>
-      <input type="text" id="precioProducto1" value="40"  size="10" disabled><br><br>
-      <a href="pago">  <button type="button" onclick="precio1()" class="btn btn-primary" name="button">Comprar</button></a>
+      <span>Precio: $ </span> <input type="text" id="precioProducto1" value="2199.99"  size="10" disabled><br><br>
+      <a href="pago">  <button type="button" onclick="precio1()" class="btn btn-success" name="button">Comprar</button></a>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#producto1">Descripción</button>
     </div>
+
     <div class="col-sm-4">
       <h3>Acer Aspire R 11</h3>
       <img src="https://static.acer.com/up/Resource/Acer/Laptops/Aspire_R11/Images/20150416/Aspire_R_11_R3-131T_blue_preview.png" class="img-responsive" style="width:100%" alt="Image">
-      <h4>Descripción</h4>
       <p>Computadora portátil delgada con una cubierta superior de metal1 y un atractivo cuerpo metálico.</p>
-      <h3 >Precio</h3>
-        <input type="text" id="precioProducto2"   value="50" disabled size="10"><br><br>
-      <a href="pago">  <button type="button" onclick="precio2()" class="btn btn-primary" name="button">Comprar</button></a>
+        <span>Precio: $ </span> <input type="text" id="precioProducto2"   value="599.99" disabled size="10"><br><br>
+      <a href="pago">  <button type="button" onclick="precio2()" class="btn btn-success" name="button">Comprar</button></a>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#producto2">Descripción</button>
     </div>
+
     <div class="col-sm-4">
       <h3>Acer SP513-52N-58WW </h3>
       <img src="https://static.acer.com/up/Resource/Acer/Laptops/Spin_5/Image/20170705/Spin-5-SP513_preview.png" class="img-responsive" style="width:100%" alt="Image">
-      <h4>Descripción</h4>
-      <p>Intel® Core™ i5-8250U
-        1.6 GHz; Quad-core
-        Memory
-        DDR4
-        8 GB (standard)
-        Up to 16 GB (maximum)</p>
-        <h3 >Precio </h3>
-          <input type="text" id="precioProducto3" value="60" disabled size="10" ><br><br>
-      <a href="pago">  <button type="button" onclick="precio3()" class="btn btn-primary" name="button">Comprar</button></a>
+      <p>Un dispositivo multimedia completo diseñado para la máxima potencia de productividad.</p>
+          <span>Precio: $ </span> <input type="text" id="precioProducto3" value="699.99" disabled size="10" ><br><br>
+      <a href="pago">  <button type="button" onclick="precio3()" class="btn btn-success" name="button">Comprar</button></a>
+
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#producto3">Descripción</button>
     </div>
   </div>
-</div><br>
+ <!-- Modal producto 1-->
+ <div class="modal fade" id="producto1" role="dialog">
+   <div class="modal-dialog">
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Lenovo Legion Y720</h4>
+       </div>
+       <div class="modal-body">
+         <p class="text-justify">Laptop Lenovo Legion Y720, portátil de juego inversivo de 15,6". Forma parte de la acción estés donde estés mediante este PC de juego portátil pero potente. Su pantalla de 15,6” presenta una increíble resolución Ultra High Definition, con un sonido envolvente a la altura. Este “bestial” portátil, con procesadores Intel Core de 7ª generación y los gráficos diferenciados de NVIDIA GTX 1060, podrá con cualquier juego, incluso en un entorno virtual. Potencia + rendimiento = perfección. <br>Ultra velocidad y almacenamiento Arranque más rápido. Menor tempo de carga durante el juego. Almacenamiento a prueba de accidentes. ¡Ah, y es silencioso!, con muchísimo espacio para almacenar todos tus juegos y cargarlos al momento.</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- Modal producto 2 -->
+ <div class="modal fade" id="producto2" role="dialog">
+   <div class="modal-dialog">
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Acer Aspire R 11</h4>
+       </div>
+       <div class="modal-body">
+         <p class="text-justify">En su interior encontramos un procesador Intel Celeron o Intel Pentium, hasta 8 GB de RAM y una memoria de hasta 500 GB en formato de disco duro.<br>
+            Además, gracias a la última versión de Windows 10 Home (también se puede optar por Windows 8.1) disfrutaremos de un buen balance entre aplicaciones de escritorio y apps. Este portátil se convierte en una excelente herramienta tanto para las aulas como para llevar de viaje o en casa. El Acer Aspire R 11  R3-131T se puede encontrar en las tiendas por un precio de partida de 350 euros. Te contamos todos sus detalles en el siguiente análisis a fondo.</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- Modal producto 3 -->
+ <div class="modal fade" id="producto3" role="dialog">
+   <div class="modal-dialog">
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Acer SP513-52N-58WW</h4>
+       </div>
+       <div class="modal-body">
+         <p class="text-justify">Todo funciona de forma más rápida y fiable con los procesadores1 Intel® y las tarjetas gráficas1 NVIDIA®.<br>
+         Disfruta de una calidad de sonido óptima con la combinación de Acer’s TrueHarmony™ y Smart Amplification con Dolby Audio™ Premium.<br>
+       Gracias a su batería de hasta 13 horas de duración3, tu dispositivo está diseñado para estar a tu lado todo el día.</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
 <script type="text/javascript">
 function precio1(){
-  var producto1 = document.getElementById('precioProducto1').value;
-  localStorage.setItem("producto", producto1);
+  var productoP1 = document.getElementById('precioProducto1').value;
+  localStorage.setItem("producto", productoP1);
 }
 function precio2()
 {
-  var producto2 = document.getElementById('precioProducto2').value;
-  localStorage.setItem("producto", producto2);
+  var productoP2 = document.getElementById('precioProducto2').value;
+  localStorage.setItem("producto", productoP2);
 }
 function precio3(){
-  var producto3 = document.getElementById('precioProducto3').value;
-  localStorage.setItem("producto", producto3);
+  var productoP3 = document.getElementById('precioProducto3').value;
+  localStorage.setItem("producto", productoP3);
 }
 </script>

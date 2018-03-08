@@ -37,7 +37,7 @@
           data: {'paymentMethodNonce': payload.nonce,
                   'primerNombre': document.getElementById('nombre').value,
                   'apellido': document.getElementById('apellido').value,
-                  'compania': document.getElementById('mail').value,
+                  'mail': document.getElementById('mail').value,
                   'precio': precio
                 }
         }).done(function(result) {
@@ -53,6 +53,24 @@
           });
 
           if (result.success) {
+            $.ajax({
+              type: 'POST',
+              url: '/email',
+              data: {
+                'mail': document.getElementById('mail').value,
+                'firstName': document.getElementById('nombre').value,
+                'lastName': document.getElementById('apellido').value,
+                'idOrder': result.transaction.id,
+                'typeCard': result.transaction.creditCard.cardType,
+                'numberCard': result.transaction.creditCard.maskedNumber,
+                'status': result.transaction.status,
+                'amount': result.transaction.amount,
+                'date': result.transaction.createdAt,
+                 'moneda': result.transaction.currencyIsoCode,
+                 'metodo': result.transaction.paymentInstrumentType,
+                 'authCode': result.transaction.processorAuthorizationCode
+              }
+            });
             $('#checkout-message').html('<h1>Success</h1><p>Your Drop-in UI is working! Check your <a href="https://sandbox.braintreegateway.com/login">sandbox Control Panel</a> for your test transactions.</p><p>Refresh to try another transaction.</p>');
           } else {
             console.log(result);
